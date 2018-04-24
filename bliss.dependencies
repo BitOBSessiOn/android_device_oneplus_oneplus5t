@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "github",
+    "repository": "omnirom/android_kernel_oneplus_msm8998",
+    "target_path": "kernel/oneplus/msm8998",
+    "revision": "android-8.1"
+  },
+  {
+    "remote": "github",
+    "repository": "DonkeyCoyote/proprietary_vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "revision": "android-8.1"
+  }
+]

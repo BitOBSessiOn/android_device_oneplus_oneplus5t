@@ -19,21 +19,24 @@
 # product configuration (apps).
 #
 
+# Specific Bliss params
+WITH_BLISS_CHARGER := false
+
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
+#$(call inherit-product, vendor/bliss/config/gsm.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# must be before including omni part
+# must be before including bliss part
 TARGET_BOOTANIMATION_SIZE := 1080p
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/bliss/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/oneplus/oneplus5t/device.mk)
@@ -43,7 +46,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 PRODUCT_PROPERTY_OVERRIDES += ro.hardware.nfc_nci=nqx.default
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := omni_oneplus5t
+PRODUCT_NAME := bliss_oneplus5t
 PRODUCT_DEVICE := oneplus5t
 PRODUCT_BRAND := OnePlus
 PRODUCT_MANUFACTURER := OnePlus
